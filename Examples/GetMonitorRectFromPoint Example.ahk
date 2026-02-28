@@ -1,8 +1,8 @@
 ﻿#Requires AutoHotkey v2.0
-#Include <GetMonitorRectFromPoint>
+#Include ..\Lib\GetMonitorRectFromPoint
 CoordMode 'Mouse', 'Screen'
 
-; DllCall('User32.dll\SetThreadDpiAwarenessContext', 'Ptr', DPI_AWARENESS_CONTEXT_PER_MONITOR_AWARE := -3, 'Ptr')  ; Requires Windows 10, version 1607 or later.
+try DllCall('User32.dll\SetThreadDpiAwarenessContext', 'Ptr', DPI_AWARENESS_CONTEXT_PER_MONITOR_AWARE := -3, 'Ptr')  ; Requires Windows 10, version 1607 or later.
 
 F3::
 {
